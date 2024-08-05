@@ -17,10 +17,8 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 def is_last_message_from_sender(chat_log, sender_name="Dad"):
     # Print the chat log for debugging
     print("Chat History:", chat_log)
-    
     # Split the chat log into individual messages
     messages = chat_log.strip().split('\n')
-    
     # Check the last message for sender name
     if messages and sender_name in messages[-1]:
         return True
